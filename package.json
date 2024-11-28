@@ -1,0 +1,26 @@
+{
+	"name": "portfolio-v2",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"lint": "biome lint --write",
+		"lint:fix": "biome check --write",
+		"format:astro": "prettier --write"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.9.4",
+		"astro": "^4.16.16",
+		"lefthook": "^1.8.4",
+		"prettier": "^3.4.1",
+		"prettier-plugin-astro": "^0.14.1",
+		"typescript": "^5.7.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"prettier-plugin-tailwindcss": "^0.6.9"
+	}
+}

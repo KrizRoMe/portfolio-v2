@@ -1,0 +1,12 @@
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+
+# Ignore artifacts:
+build
+coverage
+pnpm-lock.yaml
+
+# Ignore all HTML files:
+**/*.html

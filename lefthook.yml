@@ -1,0 +1,11 @@
+pre-commit:
+  parallel: true
+  commands:
+    header:
+      run: echo "🧹 Running pre-commit hook..."
+    pretty:
+      glob: "**/*.astro"
+      run:  npm run format:astro {staged_files}
+    linter:
+      glob: "**/*.{js,ts,jsx,tsx}"
+      run:  npm run lint:fix {staged_files} && git add {staged_files}
