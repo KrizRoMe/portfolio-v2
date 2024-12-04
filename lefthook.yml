@@ -9,3 +9,8 @@ pre-commit:
     linter:
       glob: "**/*.{js,ts,jsx,tsx}"
       run:  npm run lint:fix {staged_files} && git add {staged_files}
+
+commit-msg:
+  commands:
+    validate_commit:
+      run: node ./git_hook/commit_msg.js
