@@ -12,5 +12,7 @@ pre-commit:
 
 commit-msg:
   commands:
-    validate_commit:
-      run: node ./git_hook/commit_msg.js
+  header:
+    run: echo "💬 Running commit-msg hook..."
+  validate_commit:
+    run: node ./git_hook/commit_msg.js
