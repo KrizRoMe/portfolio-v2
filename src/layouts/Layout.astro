@@ -1,3 +1,7 @@
+---
+import { Header } from '@/src/components'
+---
+
 <!doctype html>
 <html lang='en'>
     <head>
@@ -5,18 +9,25 @@
         <meta name='viewport' content='width=device-width' />
         <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
         <meta name='generator' content={Astro.generator} />
-        <title>Astro Basics</title>
+        <title>Portfolio | Home</title>
     </head>
     <body>
-        <slot />
+        <div class='dark min-h-screen bg-black text-white'>
+            <div class='mx-auto max-w-4xl px-8 py-12'>
+                <Header />
+                <main>
+                    <slot />
+                </main>
+            </div>
+        </div>
     </body>
-</html>
 
-<style>
-    html,
-    body {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-    }
-</style>
+    <style>
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</html>
