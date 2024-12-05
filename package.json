@@ -9,7 +9,7 @@
 		"astro": "astro",
 		"lint": "biome lint --write",
 		"lint:fix": "biome check --write",
-		"format:astro": "prettier --write"
+		"format:astro": "prettier --write \"src/**/*.astro\""
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.4",

@@ -1,0 +1,16 @@
+---
+interface Props {
+    href: string
+    icon: (props: { class: string }) => Element
+}
+
+const { href, icon: Icon }: Props = Astro.props
+---
+
+<a
+    href={href}
+    aria-label='Contact link'
+    aria-labelledby='contact-link'
+    class='text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white'>
+    <Icon class='h-5 w-5' />
+</a>
