@@ -1,0 +1,18 @@
+---
+import ProjectItem from './components/ProjectItem.astro'
+
+const listProject = [1, 2, 3, 4]
+---
+
+<section class='mb-12' aria-labelledby='projects-heading'>
+    <h2 id='projects-heading' class='mb-6 text-2xl font-bold'>PROJECTS</h2>
+    <ul class='grid grid-cols-1 gap-6 md:grid-cols-2'>
+        {
+            listProject.map((project) => (
+                <li>
+                    <ProjectItem project={project} />
+                </li>
+            ))
+        }
+    </ul>
+</section>
