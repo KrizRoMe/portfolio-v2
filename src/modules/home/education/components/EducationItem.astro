@@ -1,0 +1,16 @@
+---
+interface Props {
+    title: string
+    university: string
+    year: string
+}
+
+const { title, university, year }: Props = Astro.props
+---
+
+<article>
+    <h3 class='font-bold'>{title}</h3>
+    <p class='text-sm text-gray-600 dark:text-gray-300'>
+        {university} • {year}
+    </p>
+</article>
