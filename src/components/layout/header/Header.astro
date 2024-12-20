@@ -1,7 +1,5 @@
 ---
-import { MoonIcon, SunIcon } from '@/src/components'
-
-const darkMode = false
+import ThemeSwitch from './components/ThemeSwitch.tsx'
 ---
 
 <header class='mb-12 flex items-center justify-between'>
@@ -9,7 +7,5 @@ const darkMode = false
         <button> ES </button>
         <button> EN </button>
     </div>
-    <button class='p-2'>
-        {darkMode ? <SunIcon class='h-6 w-6' /> : <MoonIcon class='h-6 w-6' />}
-    </button>
+    <ThemeSwitch client:load />
 </header>
