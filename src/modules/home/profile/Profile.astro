@@ -6,22 +6,29 @@ import MailIcon from './icons/MailIcon.astro'
 import PhoneIcon from './icons/PhoneIcon.astro'
 ---
 
-<section class='mb-12' aria-labelledby='profile-heading'>
-    <h1 class='mb-2 text-4xl font-bold'>JOHN DOE</h1>
+<section class='mb-12 text-center' aria-labelledby='profile-heading'>
+    <h1 class='mb-2 text-4xl font-bold'>CRISTOPHER ROMERO</h1>
     <h2
         id='profile-heading'
-        class='mb-4 inline-block rounded bg-black px-3 py-1 text-sm font-medium text-white dark:bg-white dark:text-black'>
-        FULLSTACK SOFTWARE ENGINEER
+        class='mb-2 inline-block rounded bg-black px-3 py-1 text-sm font-medium text-white dark:bg-white dark:text-black'>
+        DESARROLLADOR DE SOFTWARE FULLSTACK
     </h2>
-    <p class='mb-4 text-black dark:text-white'>
-        Fullstack Software Engineer with over 2 years of experience working on
-        independent projects and in the healthcare industry using JavaScript
-        (React) and Python (Django).
-    </p>
-    <ul class='flex gap-4'>
+
+    <ul class='mb-2 flex justify-center gap-2'>
         <ContactLink href='/github' icon={GithubIcon} />
         <ContactLink href='/mail' icon={MailIcon} />
         <ContactLink href='/linkedin' icon={LinkedinIcon} />
         <ContactLink href='/phone' icon={PhoneIcon} />
     </ul>
+
+    <p class='mb-2 text-pretty text-black dark:text-white'>
+        Desarrollador FullStack con más de 3 años de experiencia en proyectos
+        independientes y en la industria de la salud, especializado en HTML, CSS
+        (TailwindCSS), JavaScript (Next.js) y Python (Django). Experto en
+        resolver problemas complejos con soluciones creativas y adaptables.
+    </p>
+    <p class='font-bold italic text-black dark:text-white'>
+        JavaScript | Python | TailwindCSS | Nextjs | Django | PostgreSQL | SQL
+        Server | Docker
+    </p>
 </section>
