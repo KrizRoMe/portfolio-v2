@@ -1,15 +1,26 @@
+---
+import type { ExperienceInterface } from '../interfaces/experieceInterface'
+
+const { title, company, startDate, endDate, descriptionList } =
+    Astro.props as ExperienceInterface
+---
+
 <article class='relative'>
     <div
         class='absolute -left-[25px] top-1 h-4 w-4 rounded-full border-2 border-white bg-black dark:border-black dark:bg-white'>
     </div>
     <div>
-        <h3 class='font-bold'>Software Engineer</h3>
+        <h3 class='font-bold'>{title}</h3>
         <p class='mb-2 text-sm text-black dark:text-white'>
-            Company Name • 2022 - Present
+            {company} • {startDate} - {endDate}
         </p>
-        <p class='text-black dark:text-white'>
-            Designed and implemented user-friendly interfaces focusing on data
-            validation and user experience.
-        </p>
+
+        <ul class='list-disc pl-4'>
+            {
+                descriptionList.map((description) => (
+                    <li class='text-black dark:text-white'>{description}</li>
+                ))
+            }
+        </ul>
     </div>
 </article>
