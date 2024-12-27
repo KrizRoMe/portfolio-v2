@@ -1,9 +1,10 @@
 ---
 import { Image } from 'astro:assets'
 import placeholderImage from '@/public/600x400.svg'
+import type { projectInterface } from '../interfaces/projectInterface'
 
 interface Props {
-    project: number
+    project: projectInterface
     index: number
 }
 
@@ -12,14 +13,15 @@ const { project, index } = Astro.props
 
 <article
     class='group relative aspect-video overflow-hidden rounded-lg bg-white dark:bg-black'
-    aria-labelledby=`project-${project}`>
-    <!-- TODO: Validate when the image is lazy or eager loading -->
+    aria-labelledby=`project-${project.name}`>
     <figure>
         <Image
-            src={placeholderImage}
-            alt={`Project ${project}`}
+            src={project.image ?? placeholderImage}
+            alt={`Project ${project.name}`}
             loading={index < 2 ? 'eager' : 'lazy'}
             class='h-full w-full object-cover'
+            width={600}
+            height={400}
         />
     </figure>
 
@@ -27,9 +29,9 @@ const { project, index } = Astro.props
         class='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition-opacity group-hover:opacity-100'>
         <div class='p-4 text-center text-white'>
             <h3 class='mb-2 text-lg font-bold'>
-                Project {project}
+                {project.name}
             </h3>
-            <p class='text-sm'>Brief project description goes here</p>
+            <p class='text-balance text-sm'>{project.description}</p>
         </div>
     </div>
 </article>
