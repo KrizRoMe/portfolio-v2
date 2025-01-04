@@ -5,10 +5,9 @@ import type { projectInterface } from '../interfaces/projectInterface'
 
 interface Props {
     project: projectInterface
-    index: number
 }
 
-const { project, index } = Astro.props
+const { project } = Astro.props
 ---
 
 <a
@@ -20,7 +19,7 @@ const { project, index } = Astro.props
         <Image
             src={project.image ?? placeholderImage}
             alt={`Project ${project.name}`}
-            loading={index < 2 ? 'eager' : 'lazy'}
+            loading={'lazy'}
             class='h-full w-full object-cover'
             width={600}
             height={400}
