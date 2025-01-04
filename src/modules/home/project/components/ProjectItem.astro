@@ -11,8 +11,10 @@ interface Props {
 const { project, index } = Astro.props
 ---
 
-<article
-    class='group relative aspect-video overflow-hidden rounded-lg bg-white dark:bg-black'
+<a
+    href={project.href}
+    target='_blank'
+    class='group relative block aspect-video overflow-hidden rounded-lg bg-white dark:bg-black'
     aria-labelledby=`project-${project.name}`>
     <figure>
         <Image
@@ -34,4 +36,4 @@ const { project, index } = Astro.props
             <p class='text-balance text-sm'>{project.description}</p>
         </div>
     </div>
-</article>
+</a>
