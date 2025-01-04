@@ -3,22 +3,18 @@ import { Image } from 'astro:assets'
 import placeholderImage from '@/public/600x400.svg'
 import type { projectInterface } from '../interfaces/projectInterface'
 
-interface Props {
-    project: projectInterface
-}
-
-const { project } = Astro.props
+const { name, description, image, href } = Astro.props as projectInterface
 ---
 
 <a
-    href={project.href}
+    href={href}
     target='_blank'
     class='group relative block aspect-video overflow-hidden rounded-lg bg-white dark:bg-black'
-    aria-labelledby=`project-${project.name}`>
+    aria-labelledby=`project-${name}`>
     <figure>
         <Image
-            src={project.image ?? placeholderImage}
-            alt={`Project ${project.name}`}
+            src={image ?? placeholderImage}
+            alt={`Project ${name}`}
             loading={'lazy'}
             class='h-full w-full object-cover'
             width={600}
@@ -30,9 +26,9 @@ const { project } = Astro.props
         class='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition-opacity group-hover:opacity-100'>
         <div class='p-4 text-center text-white'>
             <h3 class='mb-2 text-lg font-bold'>
-                {project.name}
+                {name}
             </h3>
-            <p class='text-balance text-sm'>{project.description}</p>
+            <p class='text-balance text-sm'>{description}</p>
         </div>
     </div>
 </a>

@@ -1,30 +1,17 @@
 ---
 import EducationItem from './components/EducationItem.astro'
+import { educationData } from './data/educationData'
 ---
 
 <section>
-    <h2 class='mb-6 text-2xl font-bold'>EDUCATION</h2>
+    <h2 class='mb-6 text-2xl font-bold'>EDUCACIÓN</h2>
     <ul class='space-y-1'>
-        <li>
-            <EducationItem
-                title='Bachelor of Science in Computer Science'
-                university='University of the Philippines Los Baños'
-                year='2020'
-            />
-        </li>
-        <li>
-            <EducationItem
-                title='Bachelor of Science in Computer Science'
-                university='University of the Philippines Los Baños'
-                year='2020'
-            />
-        </li>
-        <li>
-            <EducationItem
-                title='Bachelor of Science in Computer Science'
-                university='University of the Philippines Los Baños'
-                year='2020'
-            />
-        </li>
+        {
+            educationData.map((education) => (
+                <li>
+                    <EducationItem {...education} />
+                </li>
+            ))
+        }
     </ul>
 </section>

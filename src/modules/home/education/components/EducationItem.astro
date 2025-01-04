@@ -1,16 +1,12 @@
 ---
-interface Props {
-    title: string
-    university: string
-    year: string
-}
+import type { educationInterface } from '../interface/educationInterface'
 
-const { title, university, year }: Props = Astro.props
+const { title, place, year } = Astro.props as educationInterface
 ---
 
-<article>
-    <h3 class='font-bold text-black dark:text-white'>{title}</h3>
+<article class=''>
+    <h3 class='font-bold'>{title}</h3>
     <p class='text-sm text-black dark:text-white'>
-        {university} • {year}
+        {place} • {year}
     </p>
 </article>
