@@ -1,11 +1,9 @@
 ---
 import ThemeSwitch from './components/ThemeSwitch.tsx'
+import DownloadCV from './components/DownloadCV.tsx'
 ---
 
 <header class='mb-12 flex items-center justify-between'>
-    <div class='flex gap-2'>
-        <!-- <button> ES </button>
-        <button> EN </button> -->
-    </div>
+    <DownloadCV client:load />
     <ThemeSwitch client:load />
 </header>
