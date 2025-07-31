@@ -3,4 +3,5 @@ export interface projectInterface {
 	description: string;
 	image: string;
 	href: string;
+	technologies: string[];
 }

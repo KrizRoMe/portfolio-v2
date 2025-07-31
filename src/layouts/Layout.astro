@@ -1,6 +1,7 @@
 ---
-import { Header } from '@/src/components'
+import { Header } from '@/components'
 import '@fontsource-variable/montserrat'
+import Background from '@/components/layout/header/components/Background.astro'
 ---
 
 <!doctype html>
@@ -12,15 +13,15 @@ import '@fontsource-variable/montserrat'
         <meta name='generator' content={Astro.generator} />
         <title>Portfolio | Cristopher Romero</title>
     </head>
-    <body>
-        <div
-            class='min-h-screen bg-white text-black dark:bg-black dark:text-white'>
-            <div class='mx-auto max-w-4xl px-8 py-12'>
-                <Header />
-                <main>
-                    <slot />
-                </main>
-            </div>
+    <body
+        class='relative min-h-screen bg-[#f8fafc] text-black dark:bg-black dark:text-white'>
+        <Background />
+
+        <div class='relative z-10 mx-auto max-w-4xl px-8 py-12'>
+            <Header />
+            <main>
+                <slot />
+            </main>
         </div>
     </body>
 
@@ -31,6 +32,12 @@ import '@fontsource-variable/montserrat'
             width: 100%;
             height: 100%;
             font-family: 'Montserrat Variable', sans-serif;
+        }
+        :root {
+            --grid-color: #e2e8f0;
+        }
+        .dark {
+            --grid-color: rgba(255, 255, 255, 0.05);
         }
     </style>
 </html>

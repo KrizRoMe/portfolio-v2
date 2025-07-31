@@ -1,4 +1,4 @@
-import { LV_APP_THEME_OBJ } from '@/src/lib/constants';
+import { LV_APP_THEME_OBJ } from '@/lib/constants';
 import { useEffect, useState } from 'preact/hooks';
 
 type APP_THEME_TYPE = 'light' | 'dark';
@@ -16,23 +16,23 @@ function ThemeSwitch() {
 			storedTheme === LV_APP_THEME_OBJ.DARK ||
 			(storedTheme === null && preferColorScheme)
 		) {
-			document.body.classList.add(LV_APP_THEME_OBJ.DARK);
+			document.documentElement.classList.add(LV_APP_THEME_OBJ.DARK);
 			localStorage.setItem('theme', LV_APP_THEME_OBJ.DARK);
 			setTheme(LV_APP_THEME_OBJ.DARK);
 			return;
 		}
 
-		document.body.classList.add(LV_APP_THEME_OBJ.LIGHT);
+		document.documentElement.classList.add(LV_APP_THEME_OBJ.LIGHT);
 		localStorage.setItem('theme', LV_APP_THEME_OBJ.LIGHT);
 		setTheme(LV_APP_THEME_OBJ.LIGHT);
 	};
 
 	const toggleTheme = (theme: APP_THEME_TYPE) => {
-		document.body.classList.remove(
+		document.documentElement.classList.remove(
 			LV_APP_THEME_OBJ.LIGHT,
 			LV_APP_THEME_OBJ.DARK,
 		);
-		document.body.classList.add(theme);
+		document.documentElement.classList.add(theme);
 		localStorage.setItem('theme', theme);
 		setTheme(theme);
 	};

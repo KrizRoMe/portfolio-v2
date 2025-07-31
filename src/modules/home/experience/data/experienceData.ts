@@ -1,5 +1,6 @@
 export const experienceData = [
 	{
+		id: 1,
 		title: 'Desarrollador de Software Senior',
 		company: 'Kedevs',
 		startDate: '2024',
@@ -13,6 +14,7 @@ export const experienceData = [
 		],
 	},
 	{
+		id: 2,
 		title: 'Desarrollador de Software Lead',
 		company: 'Datakraft',
 		startDate: '2024',
@@ -26,6 +28,7 @@ export const experienceData = [
 		],
 	},
 	{
+		id: 3,
 		title: 'Desarrollador de Software Semi Senior',
 		company: 'Datakraft',
 		startDate: '2023',
@@ -42,6 +45,7 @@ export const experienceData = [
 		],
 	},
 	{
+		id: 4,
 		title: 'Desarrollador de Software Junior',
 		company: 'Datakraft',
 		startDate: '2022',
