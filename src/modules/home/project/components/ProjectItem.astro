@@ -1,6 +1,5 @@
 ---
 import { Image } from 'astro:assets'
-import placeholderImage from './public/600x400.svg'
 import type { projectInterface } from '../interfaces/projectInterface'
 
 const { name, description, image, href, technologies } =
@@ -20,7 +19,7 @@ const projectAriaLabelledBy = `project-${name.replace(/\s+/g, '-').toLowerCase()
             class='absolute inset-0 z-10'
             aria-label={`Visit ${name} project`}></a>
         <Image
-            src={image ?? placeholderImage}
+            src={image ?? '/600x400.svg'}
             alt={`${name} project preview`}
             loading='lazy'
             width={600}
