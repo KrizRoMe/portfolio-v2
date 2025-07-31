@@ -16,7 +16,7 @@ export const projectData = [
 	},
 	{
 		name: 'Tee Craft',
-		description: 'App web enfocada  en personalizar camisetas en 3D',
+		description: 'App web enfocada  en personalizar camisetas en 3D.',
 		image: '/project/image/image-tee-craft.webp',
 		href: 'https://teecraft.lat/',
 		technologies: [
