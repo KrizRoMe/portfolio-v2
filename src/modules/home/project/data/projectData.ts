@@ -4,7 +4,7 @@ export const projectData = [
 		description:
 			'App web enfocada a generar perfiles README de GitHub mediante IA.',
 		image: '/project/image/image-perfigit.webp',
-		href: 'https://perfigit.lat/',
+		href: 'https://perfigit.app/',
 		technologies: [
 			'React',
 			'Next.js',
